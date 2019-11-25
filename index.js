@@ -1,5 +1,6 @@
 var inquirer = require('inquirer');
 var axios = require('axios');
+var html_pdf = require('html-pdf');
 
 
 
@@ -26,7 +27,13 @@ function init() {
         axios.get(`https://api.github.com/users/${githubUsername}`)
             .then(function (response) {
                 // handle success
-                console.log(response.data);
+                console.log(response);
+                console.log(response.data.public_repos);
+                console.log(response.data.followers);
+
+                console.log(response.data.following);
+
+
             })
 
 
