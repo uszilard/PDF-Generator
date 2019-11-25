@@ -27,21 +27,14 @@ function init() {
         axios.get(`https://api.github.com/users/${githubUsername}`)
             .then(function (response) {
                 // handle success
-                console.log(response);
+                console.log(response.data.bio);
                 console.log(response.data.public_repos);
                 console.log(response.data.followers);
-
                 console.log(response.data.following);
 
 
             })
-
-
     })
-
-
-
 }
-
 init();
 
